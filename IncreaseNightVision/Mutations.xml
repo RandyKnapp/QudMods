@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mutations>
+    <category Name="Physical">
+        <mutation Name="Night Vision X" Cost="1" MaxSelected="1" Class="NightVisionX" Exclusions="" Code=""></mutation>
+    </category>
+</mutations>
