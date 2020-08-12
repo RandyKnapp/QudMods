@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+    <option ID="OptionBetterTimeSimple" DisplayText="Show Simplified View" Category="BetterTime" Type="Checkbox" Default="No" />
+    <option ID="OptionBetterTime24Hour" DisplayText="Use 24-hour Clock" Category="BetterTime" Type="Checkbox" Default="Yes" />
+</options>

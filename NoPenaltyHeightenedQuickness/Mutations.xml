@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mutations>
+    <category Name="Physical">
+        <mutation Name="Heightened Quickness" Cost="5" MaxSelected="1" Class="HeightenedSpeedX" Exclusions="" BearerDescription="the quick" Code="bk"></mutation>
+    </category>
+</mutations>

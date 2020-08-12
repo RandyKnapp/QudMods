@@ -7,8 +7,8 @@ namespace XRL.World.Parts.Mutation
     {
         public NightVisionX()
         {
-            Name = "NightVisionX";
-            DisplayName = "Night Vision (Improved)";
+            DisplayName = "Night Vision";
+            MaxLevel = 10;
         }
 
         public override bool CanLevel()
@@ -23,15 +23,17 @@ namespace XRL.World.Parts.Mutation
 
         private int GetBonusRadiusForLevel(int level)
         {
-            return GetLightRadiusForLevel(level) + level;
+            return GetLightRadiusForLevel(level) * 2;
+        }
+
+        public override string GetDescription()
+        {
+            return "You see in the dark.";
         }
 
         public override string GetLevelText(int level)
         {
-            string Ret = "You can see in the dark.\n";
-            Ret += $"Light Radius: {GetLightRadiusForLevel(level)}\n";
-            Ret += $"Bonus Radius: {GetBonusRadiusForLevel(level)}" ;
-            return Ret;
+            return $"Sight Radius: {GetLightRadiusForLevel(level)}";
         }
 
         public override bool HandleEvent(BeforeRenderEvent e)

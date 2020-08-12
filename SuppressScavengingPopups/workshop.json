@@ -1,0 +1,8 @@
+{
+  "workshopId": 2195263366,
+  "Title": "Suppress Scavenging Popups",
+  "Description": "Does what it says on the tin: does not show a prompt when you successfully scavenge from garbage.\n\nThe setting to enable or disable this is in the Prompts section of the Options menu.",
+  "Tags": "beta,ux",
+  "Visibility": "2",
+  "ImagePath": "preview.png"
+}
