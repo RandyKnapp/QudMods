@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="BaseWristblade" Inherits="BaseDagger">
+        <tag Name="Hitsound" Value="Hit_Default"/>
+    </object>
+
+    <object Name="ArmDagger1" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="desert wristblade" Tile="Items/sw_wristblade1.png" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="2" BaseDamage="1d3" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="15"/>
+        <part Name="Description" Short="Invented by nomads of the desert tribes, this iron spike is attached to the forearm with a leather strap."/>
+        <part Name="Metal"/>
+        <tag Name="Tier" Value="1"/>
+    </object>
+
+    <object Name="ArmDagger2" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="{{Y|steel}} wristblade" Tile="Items/sw_wristblade1.png" ColorString="&amp;Y" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="3" BaseDamage="1d4" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="20"/>
+        <part Name="Stainless"/>
+        <part Name="Description" Short="A short steel blade attached to the forearm with a leather strap."/>
+        <part Name="Metal"/>
+        <tag Name="Tier" Value="2"/>
+    </object>
+
+    <object Name="ArmDagger3" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="{{b|carbide}} wristblade" Tile="Items/sw_wristblade1.png" ColorString="&amp;b" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="4" BaseDamage="1d6" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="40"/>
+        <part Name="Description" Short="A thin blade of blue-grey metal attached to the forearm with a leather strap."/>
+        <part Name="Metal"/>
+        <tag Name="Tier" Value="3"/>
+    </object>
+
+    <object Name="ArmDagger4" Load="Merge">
+        <part Name="Render" DisplayName="{{B|folded carbide}} wristblade" Tile="Items/sw_wristblade2.png" ColorString="&amp;B" DetailColor="y" RenderString="\"/>
+        <part Name="Description" Short="A blade of veined, folded carbide attached to the forearm with a plastifer strap."/>
+    </object>
+
+    <object Name="ArmDagger5" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="{{K|fullerite}} wristblade" Tile="Items/sw_wristblade2.png" ColorString="&amp;K" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="6" BaseDamage="1d10" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="150"/>
+        <part Name="Description" Short="A fractured, razor sharp spike of fullerite, attached to the forearm with a striking mechanism and plastifer shell."/>
+        <tag Name="Tier" Value="5"/>
+        <part Name="Physics" Weight="2"/>
+    </object>
+
+    <object Name="ArmDagger6" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="{{K|{{crysteel|crysteel}} wristblade}}" Tile="Items/sw_wristblade3.png" ColorString="&amp;g" DetailColor="K" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="7" BaseDamage="1d12" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="310"/>
+        <part Name="Description" Short="Blast furnaces sucked the tidal energy out of the planet, heated carbon to solar temperatures, and poured it into hexagonal molds. The emerald tongs used to retrieve the casts atomized and vented vanadium -- the green glint -- into the manifold, imperfecting the metal and conferring its characteristic hue."/>
+        <part Name="Metal"/>
+        <part Name="Physics" Weight="2" FlameTemperature="99999" VaporTemperature="9999"/>
+        <tag Name="Tier" Value="6"/>
+    </object>
+
+    <object Name="ArmDagger7" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="{{K|flawless {{crysteel|crysteel}} wristblade}}" Tile="Items/sw_wristblade3.png" ColorString="&amp;G" DetailColor="K" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="8" BaseDamage="1d12+1" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="690"/>
+        <part Name="Stainless"/>
+        <part Name="Description" Short="Blast furnaces sucked the tidal energy out of the planet, heated carbon to solar temperatures, and poured it into hexagonal molds. The emerald tongs used to retrieve the casts atomized and vented vanadium -- the green glint -- into the manifold, imperfecting the metal and conferring its characteristic hue. Casts mottled with dust particles were culled and fed to lithovores, leaving only the perfect hexagonal prisms."/>
+        <part Name="Metal"/>
+        <part Name="Physics" Weight="2" FlameTemperature="99999" VaporTemperature="9999"/>
+        <tag Name="Tier" Value="7"/>
+    </object>
+
+    <object Name="ArmDagger8" Inherits="BaseWristblade">
+        <part Name="Render" DisplayName="{{zetachrome|zetachrome}} wristblade" Tile="Items/sw_wristblade3.png" ColorString="&amp;m" DetailColor="y" RenderString="\"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="9" BaseDamage="1d12+2" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Commerce" Value="1390"/>
+        <part Name="Stainless"/>
+        <part Name="Description" Short="Quark-gluon plasma rapidly cooled and was extinguished on the voidpeaks of the early universe, except where the globules got trapped in 6D kinks of spacetime. There they glided in the slipstream for billions of years until beings discovered them, built machines to extract and cool them, and reheat them in their stellar furnaces."/>
+        <part Name="Metal"/>
+        <part Name="Physics" Weight="2" FlameTemperature="99999" VaporTemperature="9999"/>
+        <tag Name="Tier" Value="8"/>
+    </object>
+
+    <object Name="Vibro Wristblade" Inherits="MeleeWeapon">
+        <part Name="Render" DisplayName="{{c|vibro wristblade}}" ColorString="&amp;c" DetailColor="K" RenderString="\" Tile="Items/sw_wristblade2.png"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="0" BaseDamage="1d4" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Examiner" AlternateDisplayName="wristblade" Complexity="4" Difficulty="0"/>
+        <part Name="Commerce" Value="120"/>
+        <part Name="EnergyCellSocket" SlotType="EnergyCell"/>
+        <part Name="Description" Short="A short shimmering blue blade extends from a dense black plastic bracer."/>
+        <part Name="RulesDescription" Text="When charged, this weapon's penetration value is equal to the defender's armor value."/>
+        <part Name="TinkerItem" Bits="0004" CanDisassemble="true" CanBuild="true" CanRepair="true"/>
+        <part Name="Metal"/>
+        <part Name="VibroWeapon" ChargeUse="100"/>
+        <part Name="Physics" Weight="1"/>
+        <tag Name="Mods" Value="BladeMods,WeaponMods,CommonMods,ElectronicsMods"/>
+        <tag Name="Tier" Value="4"/>
+        <tag Name="Hitsound" Value = "Hit_Default"/>
+    </object>
+
+    <object Name="Gaslight Wristblade" Inherits="MeleeWeapon">
+        <part Name="Render" DisplayName="{{gaslight|gaslight}} wristblade" ColorString="&amp;G" DetailColor="w" RenderString="\" Tile="Items/sw_wristblade4.png"/>
+        <part Name="MeleeWeapon" IgnoreStrength="true" MaxStrengthBonus="0" BaseDamage="1d4" Skill="ShortBlades" SecondaryStat="Agility" Slot="Arm"/>
+        <part Name="Examiner" AlternateDisplayName="wristblade" Complexity="4" Difficulty="0"/>
+        <part Name="Commerce" Value="120"/>
+        <part Name="EnergyCellSocket" SlotType="EnergyCell"/>
+        <part Name="Description" Short="This intricately-carved wooden cuff emits a thin, terse, undulous beam of pale green light, whose intensity is such that it may cut away steel."/>
+        <part Name="TinkerItem" Bits="0004" CanDisassemble="true" CanBuild="true" CanRepair="true"/>
+        <part Name="Metal"/>
+        <part Name="Gaslight" ChargeUse="100" ChargedSkill="ShortBlades" UnchargedSkill="Cudgel" ChargedPenetrationBonus="5" UnchargedPenetrationBonus="0" ChargedDamage="1d6" UnchargedDamage="1d2" ChargedName="{{gaslight|gaslight}} wristblade" UnchargedName="gaslight wristblade"/>
+        <part Name="Physics" Weight="2"/>
+        <tag Name="Mods" Value="WeaponMods,CommonMods,ElectronicsMods"/>
+        <tag Name="Tier" Value="4"/>
+        <tag Name="WeaponIgnoreStrength"/>
+        <tag Name="Hitsound" Value = "Hit_Default"/>
+    </object>
+</objects>

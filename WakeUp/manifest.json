@@ -1,0 +1,10 @@
+{
+  "id": "WakeUp",
+  "loadorder": 1,
+  "title": "{{W|Wake Up!}}",
+  "description": "Did you know you could wake sleeping NPCs up? Now it's easier than ever, just interact with them!",
+  "tags": "beta,npc,conversation,ux",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

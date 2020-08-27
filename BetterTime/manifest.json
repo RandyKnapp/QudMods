@@ -5,6 +5,6 @@
   "description": "Adds a clock and a day/night cycle tracker instead of the in-world time-period name.",
   "tags": "Time,Clock",
   "version": "1.0",
-  "author": "RandyKnapp",
+  "author": "{{zetachrome|RandyKnapp}}",
   "previewImage": "preview2f.png"
 }

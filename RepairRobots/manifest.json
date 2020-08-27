@@ -1,0 +1,10 @@
+{
+  "id": "RepairRobots",
+  "loadorder": 1,
+  "title": "{{tarnished|Repair Robots}}",
+  "description": "Adds a new skill for repairing non-hostile robots.",
+  "tags": "skill,tinkering",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mutations>
+    <category Name="Physical">
+        <mutation Name="Acid Blood" Cost="3" MaxSelected="1" Class="Randy_AcidBlood" Exclusions="Cold-Blooded" BearerDescription="the green" Code="xrba" />
+    </category>
+</mutations>

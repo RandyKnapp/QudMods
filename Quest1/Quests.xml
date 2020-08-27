@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quests>
+    <quest Name="Special Order" Level="3"
+            Accomplishment="TODO Accomplishment"
+            Hagiograph="TODO Hagiograph"
+            HagiographCategory="FindsObject">
+
+        <step Name="Find the curio" XP="0">
+            <text>Search Qud for the strange curio.</text>
+        </step>
+
+        <step Name="Optional: Ask around about the curio" XP="0">
+            <text>Ask tinkers or merchants about the curio's location.</text>
+        </step>
+
+    </quest>
+</quests>

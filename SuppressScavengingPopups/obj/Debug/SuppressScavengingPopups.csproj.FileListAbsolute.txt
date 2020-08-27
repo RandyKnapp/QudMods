@@ -1,7 +1,6 @@
 C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\SuppressScavengingPopups.dll
 C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\SuppressScavengingPopups.pdb
 C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\0Harmony.dll
-C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\Assembly-CSharp.dll
 C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\UnityEngine.CoreModule.dll
 C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\UnityEngine.UI.dll
 C:\Users\rknapp\Documents\GitHub\QudMods\SuppressScavengingPopups\bin\Debug\Ionic.Zip.Unity.dll

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="Randy_TinkersFriend" Inherits="BaseRifle">
+        <part Name="Render" DisplayName="tinker's friend" Tile="items/sw_laser_rifle.bmp" ColorString="&amp;K" DetailColor="w"/>
+        <part Name="Description" Short="A complex and inscrutable rifle-like device, the tinker's friend is specially designed to use bits as ammunition."/>
+        <part Name="Physics" Weight="15" UsesTwoSlots="true"/>
+        <part Name="Commerce" Value="170"/>
+        <part Name="Randy_BitsAmmoLoader"
+                WeaponParts="MissileWeapon,Randy_ArcDischarger"
+                ModeA="Randy_TinkersFriend_LaserMode"
+                ModeB="Randy_TinkersFriend_ShotgunMode"
+                ModeC="Randy_TinkersFriend_GunMode"
+                ModeD="Randy_TinkersFriend_ArcMode"
+                Mode1="Randy_TinkersFriend_ChainLaserMode"
+                Mode2="Randy_TinkersFriend_PlasmaShotgunMode"
+                Mode3="Randy_TinkersFriend_ChaingunMode"
+                Mode4="Randy_TinkersFriend_RailgunMode"
+                Mode5="Randy_TinkersFriend_FreezeRayMode"
+                Mode6="Randy_TinkersFriend_ArcCannonMode"
+                Mode7="Randy_TinkersFriend_SwarmMissilesMode"
+                Mode8="Randy_TinkersFriend_PhaseCannonMode" />
+        <part Name="Metal"/>
+        <part Name="TinkerItem" Bits="001234" CanDisassemble="true" CanBuild="true" CanRepair="true"/>
+        <tag Name="Tier" Value="3"/>
+        <tag Name="DynamicObjectsTable:Guns"/>
+        <tag Name="Mods" Value="MissileWeaponMods,FirearmMods,CommonMods,RifleMods"/>
+        <tag Name="AlwaysEquipAsMissileWeapon" Value="1"/>
+    </object>
+
+    <!-- Laser Mode -->
+    <object Name="Randy_TinkersFriend_LaserMode" Inherits="DataBucket">
+        <part Name="Description" Short="Beam Emitter" Long="Emit a beam of focused energy while rapidly discharging scrap power systems."/>
+        <part Name="MissileWeapon" AmmoChar="&amp;R-" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="4" />
+        <tag Name="ProjectileObject" Value="ProjectileLaserPistol"/>
+        <tag Name="MissileFireSound" Value="pistol_laser" />
+        <tag Name="ReloadSound" Value="compartment_close_whine_up"/>
+    </object>
+
+    <!-- Shotgun Mode -->
+    <object Name="Randy_TinkersFriend_ShotgunMode" Inherits="DataBucket">
+        <part Name="Description" Short="Shatterblast" Long="Fire a blast of razor-sharp crystal shards."/>
+        <part Name="MissileWeapon" NoWildfire="true" ShotsPerAction="8" AmmoPerAction="1" ShotsPerAnimation="8" WeaponAccuracy="45" RangeIncrement="6"/>
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileShatterblastShard"/>
+        <tag Name="MissileFireSound" Value="shotgun1_2"/>
+        <tag Name="ReloadSound" Value="ShotgunReload"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileShatterblastShard" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="blast of crystal shards" ColorString="&amp;G"/>
+        <part Name="Projectile" BasePenetration="4" BaseDamage="1d2" ColorString="&amp;G" PassByVerb="fly"/>
+        <part Name="Randy_ProjectileDisplayOverride" ColorString="&amp;G" Chars="&#x10;&#x11;&#x1E;&#x1F;"/>
+        <part Name="Physics" IsReal="false"/>
+        <tag Name="Slug"/>
+    </object>
+
+    <!-- Rifle Mode -->
+    <object Name="Randy_TinkersFriend_GunMode" Inherits="DataBucket">
+        <part Name="Description" Short="Scrap Rifle" Long="Fire a piece of scrap at high-velocity."/>
+        <part Name="MissileWeapon" AmmoChar="&amp;B&#x04;" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="7"/>
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileScrapRifle"/>
+        <tag Name="MissileFireSound" Value="rifles_regularSingleShot"/>
+        <tag Name="ReloadSound" Value="FirearmReload"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileScrapRifle" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="scrap slug" />
+        <part Name="Projectile" BasePenetration="5" BaseDamage="1d8" ColorString="&amp;y" PassByVerb="whiz" />
+        <part Name="Physics" IsReal="false" />
+        <tag Name="Slug" />
+    </object>
+
+    <!-- Arc Burst Mode -->
+    <object Name="Randy_TinkersFriend_ArcMode" Inherits="DataBucket">
+        <part Name="Description" Short="Arc Burst" Long="Rapidly discharge high-voltage electricity in the immediate vicinity."/>
+        <part Name="Randy_ArcDischarger" NumberOfArcs="8" Range="1" Damage="1d2+1"/>
+        <part Name="MissileWeapon"/>
+        <tag Name="ProjectileObject" Value="*none"/>
+        <tag Name="MissileFireSound" Value="Electric"/>
+        <tag Name="ReloadSound" Value="Electric"/>
+    </object>
+
+    <!-- Chain Laser Mode -->
+    <object Name="Randy_TinkersFriend_ChainLaserMode" Inherits="DataBucket">
+        <part Name="Description" Short="Chainlaser" Long="High-frequency multiphase power systems emit devastating gamma-laser beams."/>
+        <part Name="MissileWeapon" AmmoChar="&amp;R&#15;" ShotsPerAction="5" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="10" />
+        <tag Name="ProjectileObject" Value="ProjectileLaserRifle"/>
+        <tag Name="MissileFireSound" Value="laser_triple_1"/>
+        <tag Name="ReloadSound" Value="compartment_close_whine_up"/>
+    </object>
+
+    <!-- Plasma Shotgun Mode -->
+    <object Name="Randy_TinkersFriend_PlasmaShotgunMode" Inherits="DataBucket">
+        <part Name="Description" Short="Plasmablast" Long="Ultrafocus the latent background energy of the Kasaphescence to violently propel shards of plasmatic metal bent on destruction."/>
+        <part Name="MissileWeapon" NoWildfire="true" ShotsPerAction="10" AmmoPerAction="1" ShotsPerAnimation="10" WeaponAccuracy="30" RangeIncrement="6"/>
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectilePlasmaShotgun"/>
+        <tag Name="MissileFireSound" Value="laser_heavy_2"/>
+        <tag Name="ReloadSound" Value="ShotgunReload"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectilePlasmaShotgun" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="shard of plasmatic metal" />
+        <part Name="Projectile" BasePenetration="6" BaseDamage="1d4+2" ColorString="&amp;y" PassByVerb="zing" />
+        <part Name="Randy_ProjectileDisplayOverride" Colors="GO" Chars="&#x18;&#x19;&#x1A;&#x1B;"/>
+        <part Name="Physics" IsReal="false" />
+        <tag Name="Slug" />
+    </object>
+
+    <!-- Chaingun Mode -->
+    <object Name="Randy_TinkersFriend_ChaingunMode" Inherits="DataBucket">
+        <part Name="Description" Short="Autocannon" Long="Advanced mechanisms fire super-dense pure-alloy slugs at ultra-high rates of fire."/>
+        <part Name="MissileWeapon" AnimationDelay="0" Skill="HeavyWeapons" ShotsPerAction="5" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="10" RangeIncrement="6" />
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileAutocannonBullet"/>
+        <tag Name="MissileFireSound" Value="rifle_regularChainGun_1"/>
+        <tag Name="ReloadSound" Value="FirearmReload"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileAutocannonBullet" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="pure-alloy slug" />
+        <part Name="Projectile" BasePenetration="6" BaseDamage="1d6" ColorString="&amp;y" PassByVerb="whiz" />
+        <part Name="Physics" IsReal="false" />
+        <tag Name="Slug" />
+    </object>
+
+    <!-- Railgun Mode -->
+    <object Name="Randy_TinkersFriend_RailgunMode" Inherits="DataBucket">
+        <part Name="Description" Short="Railgun" Long="Use energized coils of pure alloy to provide pinpoint, laser-accurate long-range placement of ultrasonic microslugs."/>
+        <part Name="MissileWeapon" Skill="Pistol" AmmoChar="&amp;C-" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="1" />
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileRailgun"/>
+        <tag Name="MissileFireSound" Value="lazerMedium2"/>
+        <tag Name="ReloadSound" Value="FirearmReload"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileRailgun" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="{{C|ultrasonic microslugs}}" ColorString="&amp;C" />
+        <part Name="Projectile" BasePenetration="0" Attributes="Vorpal" BaseDamage="5d6" ColorString="&amp;C" PenetrateCreatures="true" PassByVerb="crackle" />
+        <tag Name="NoDodging"/>
+        <tag Name="IgnoresForceWall"/>
+        <part Name="Physics" IsReal="false" />
+    </object>
+
+    <!-- Eigenrifle Mode
+    <object Name="Randy_TinkersFriend_EigenRifleMode" Inherits="DataBucket">
+        <part Name="Description" Short="Eigenblaster" Long="Use unknowable technology to fire a compacted bolt of inverted nanoplasma."/>
+        <part Name="MissileWeapon" AmmoChar="&amp;K-" ShotsPerAction="3" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="2" />
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileEigenblaster"/>
+        <tag Name="MissileFireSound" Value="lazerMedium4"/>
+        <tag Name="ReloadSound" Value="compartment_close_whine_up"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileEigenblaster" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="{{K|nanoplasma bolt}}" ColorString="&amp;K" />
+        <part Name="Projectile" BasePenetration="8" BaseDamage="2d6" Attributes="Disintegrate" ColorString="&amp;K" PenetrateCreatures="true" PassByVerb="hum" />
+        <part Name="Physics" IsReal="false" />
+    </object>-->
+
+    <!-- Freeze Ray Mode -->
+    <object Name="Randy_TinkersFriend_FreezeRayMode" Inherits="DataBucket">
+        <part Name="Description" Short="Nanofreezer" Long="Hyper-frozen nanomaterials project a narrow beam of intense cold."/>
+        <part Name="MissileWeapon" AmmoChar="FR" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
+        <tag Name="ProjectileObject" Value="ProjectileFreezeRay"/>
+        <tag Name="MissileFireSound" Value="lazerMedium4"/>
+        <tag Name="ReloadSound" Value="compartment_close_whine_up"/>
+    </object>
+
+    <!-- Arc Cannon Mode -->
+    <object Name="Randy_TinkersFriend_ArcCannonMode" Inherits="DataBucket">
+        <part Name="Description" Short="Arc Cannon" Long="Emit a massive blast of electrical energy."/>
+        <part Name="MissileWeapon" NoWildfire="false" MaxRange="80" AnimationDelay="5" AmmoChar="e" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileArcCannon"/>
+        <tag Name="MissileFireSound" Value="Electric"/>
+        <tag Name="ReloadSound" Value="Electric"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileArcCannon" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="{{W|electrical arc}}" ColorString="&amp;W" />
+        <part Name="Projectile" BasePenetration="11" BaseDamage="2d6" Attributes="Electric" ColorString="&amp;W" PassByVerb="leap" PenetrateCreatures="true" />
+        <part Name="Physics" IsReal="false" />
+    </object>
+
+    <!-- Swarm Missiles Mode -->
+    <object Name="Randy_TinkersFriend_SwarmMissilesMode" Inherits="DataBucket">
+        <part Name="Description" Short="Swarm Missiles" Long="Launch several semi-intelligent swarmer missiles."/>
+        <part Name="MissileWeapon" NoWildfire="false" MaxRange="80" AnimationDelay="1" AmmoChar="sm" ShotsPerAction="10" AmmoPerAction="1" ShotsPerAnimation="2" WeaponAccuracy="5" />
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectileSwarmRocket"/>
+        <tag Name="MissileFireSound" Value="burn_blast"/>
+        <tag Name="ReloadSound" Value="FirearmReload"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectileSwarmRocket" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="{{r|rocket}}" ColorString="&amp;r" />
+        <part Name="Projectile" BasePenetration="13" BaseDamage="2d6" ColorString="&amp;r" PassByVerb="whoosh" />
+        <part Name="ExplodeOnHit" Force="2000" Damage="6d6" />
+        <part Name="Physics" IsReal="false" />
+    </object>
+
+    <!-- Phase Cannon Mode -->
+    <object Name="Randy_TinkersFriend_PhaseCannonMode" Inherits="DataBucket">
+        <part Name="Description" Short="Phaserizer" Long="Rapid-fire blast of omniphase meta-energy, destroying everything in its path in this reality and all others."/>
+        <part Name="MissileWeapon" Skill="Rifle" AmmoChar="&amp;M&#15;" ShotsPerAction="4" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
+        <tag Name="ProjectileObject" Value="Randy_TinkersFriend_ProjectilePhaserizer"/>
+        <tag Name="MissileFireSound" Value="laser_heavy_3"/>
+        <tag Name="ReloadSound" Value="compartment_close_whine_up"/>
+    </object>
+    <object Name="Randy_TinkersFriend_ProjectilePhaserizer" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="{{M|energy bolt}}" ColorString="&amp;M" />
+        <part Name="Projectile" BasePenetration="14" BaseDamage="4d12" Attributes="Light Heat" ColorString="&amp;M" PassByVerb="streak" />
+        <part Name="Physics" IsReal="false" />
+        <part Name="OmniphaseProjectile" />
+        <part Name="TreatAsSolid" RealityDistortionBased="true" />
+        <tag Name="Omniphase" />
+    </object>
+</objects>

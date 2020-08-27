@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skills>
+    <skill Name="Tinkering" Load="Merge">
+        <power Name="Repair Robots" Cost="50" Prereq="Tinkering_Repair" Attribute="Intelligence" Minimum="19" Class="Randy_Tinkering_RepairRobot" Snippet="performing robot-repair" Description="You may repair non-hostile robots with Bits. Repairing a robot costs more scrap bits when repairing more damage, and costs more advanced bits when repairing higher-level robots." />
+    </skill>
+</skills>

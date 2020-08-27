@@ -1,0 +1,10 @@
+{
+  "id": "BitGun",
+  "loadorder": 1,
+  "title": "{{O|Tinker's Friend}} (beta)",
+  "description": "Adds a new weapon, just for Tinker and Artifex builds! Load the weapon with different tinkering bits to activate different firing modes!\n\n[Modes]\n{{R|A}}: {{R|Beam Emitter}}\n{{G|B}}: {{G|Shatterblast}}\n{{B|C}}: {{B|Scrap Rifle}}\n{{C|D}}: {{C|Arc Burst}}\n{{r|1}}: {{r|Chainlaser}}\n{{g|2}}: {{g|Plasmablast}}\n{{b|3}}: {{b|Autocannon}}\n{{c|4}}: {{c|Railgun}}\n{{K|5}}: {{K|Nanofreezer}}\n{{W|6}}: {{W|Arc Cannon}}\n{{Y|7}}: {{Y|Swarm Missiles}}\n{{M|8}}: {{M|Phaserizer}}\n\nWish for \"bitgun\" to be given the Tinker's Friend and some bits.\n\nPlease leave a comment with your ideas for improvement!",
+  "tags": "beta,item,weapon,tinkering",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

@@ -1,0 +1,8 @@
+{
+  "workshopId": 2196482504,
+  "Title": "Acid Blood",
+  "Description": "Adds a new mutation: Acid Blood, that replaces the character's blood with acid. When you bleed, you bleed acid onto the ground. You become immune to acid damage.",
+  "Tags": "beta,mutation",
+  "Visibility": "2",
+  "ImagePath": "preview.png"
+}

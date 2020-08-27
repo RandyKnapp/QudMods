@@ -1,0 +1,10 @@
+{
+  "id": "NoEatingSound",
+  "loadorder": 1,
+  "title": "{{R|No Eating Sound}}",
+  "description": "Removes the eating sound from the campfire.",
+  "tags": "beta,ux,cosmetic",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

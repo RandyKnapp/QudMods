@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<encountertables>
+    <encountertable Name="Melee Weapons 1R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger1"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 2R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger2"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 3R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger3"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 4R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="Gaslight Wristblade"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Artifact 4R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="Vibro Wristblade"/>
+            <object Chance="20" Number="1d1" Blueprint="Gaslight Wristblade"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 5R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger5"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 6R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger6"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 7R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger7"/>
+        </objects>
+    </encountertable>
+
+    <encountertable Name="Melee Weapons 8R" Load="Merge">
+        <objects>
+            <object Chance="20" Number="1d1" Blueprint="ArmDagger8"/>
+        </objects>
+    </encountertable>
+</encountertables>

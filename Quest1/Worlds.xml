@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worlds>
+    <world Name="JoppaWorld" Load="Merge">
+        <cell Name="Rustwell_Quest" Inherits="Rustwell" ApplyTo="TerrainRustWell_Quest">
+            <zone Level="14" x="1" y="1" Name="Rustwell">
+                <builder Class="Strata"></builder>
+
+                <builder Class="CaveEastMouth" y="9"></builder>
+                <builder Class="CaveEastMouth" y="10"></builder>
+                <builder Class="CaveEastMouth" y="11"></builder>
+                <builder Class="CaveEastMouth" y="12"></builder>
+
+                <builder Class="StairsUp"></builder>
+
+                <encounter Table="Rustwell 4" Amount="medium"></encounter>
+                <builder Class="PossibleCryotube"></builder>
+                <builder Class="Music" Track="Caves1" Chance="5"></builder>
+            </zone>
+
+            <zone Level="14" x="2" y="1" Name="TBD Village">
+                <builder Class="CaveWestMouth" y="9"></builder>
+                <builder Class="CaveWestMouth" y="10"></builder>
+                <builder Class="CaveWestMouth" y="11"></builder>
+                <builder Class="CaveWestMouth" y="12"></builder>
+                <map FileName="JoppaRuins.rpm"></map>
+                <builder Class="Music" Track="Kyakukya" Chance="100"></builder>
+            </zone>
+        </cell>
+    </world>
+</worlds>

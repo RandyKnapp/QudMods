@@ -1,10 +1,10 @@
 {
   "id": "SuppressScavengingPopups",
   "loadorder": 1,
-  "title": "{{green|Suppress Scavenging Popups}}",
+  "title": "{{yellow|Suppress Scavenging Popups}}",
   "description": "Does what it says: does not show a prompt when successfully scavenging",
   "tags": "ux",
   "version": "1.0",
-  "author": "RandyKnapp",
+  "author": "{{zetachrome|RandyKnapp}}",
   "previewImage": "preview.png"
 }

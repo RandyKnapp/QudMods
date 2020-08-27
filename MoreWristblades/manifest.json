@@ -1,0 +1,10 @@
+{
+  "id": "MoreWristblades",
+  "loadorder": 1,
+  "title": "{{silvery|More Wristblades}}",
+  "description": "Adds new wristblades at every tier, inserts them into the encounter tables, and gives them a custom tile.\n\nAre they too overpowered? Yes, but they're awesome!\n\nThe following items are included in this mod:\n- Desert Wristblade\n- Steel Wristblade\n- Carbide Wristblade\n- Folded Carbide Wristblade\n- Fullerite Wristblade\n- Crysteel Wristblade\n- Flawless Crysteel Wristblade\n- Zetachrome Wristblade\n- Vibro Wristblade\n- Gaslight Wristblade",
+  "tags": "stable,item,weapon,sprite",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

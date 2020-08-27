@@ -23,7 +23,7 @@ namespace BetterTime
         private const int NOTCHES = 18;
         private const int SEGMENTS_PER_NOTCH = 2;
 
-        public static bool OverrideSimple = false;
+        public static bool OverrideSimple;
 
         public static void Postfix(ref string __result, int minute)
         {

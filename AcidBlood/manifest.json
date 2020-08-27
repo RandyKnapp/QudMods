@@ -1,0 +1,10 @@
+{
+  "id": "AcidBlood",
+  "loadorder": 1,
+  "title": "{{G|Acid Blood}}",
+  "description": "Adds a new mutation. Your blood is replaced with acid.",
+  "tags": "beta,mutation",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

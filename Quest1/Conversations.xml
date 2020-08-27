@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+    <conversation ID="JoppaDoru_Merge">
+        <node ID="Start">
+            <choice GotoID="SpecialOrder" IfNotHaveQuest="Special Order">Do you need anything?</choice>
+        </node>
+        <node ID="SpecialOrder">
+            <text>
+                Well, hmm. You... could be suitable. Anyway, I have a particular associate, a water baron, that placed a special order with me some time ago. He's got his eye on a rather... ah... {{W|strange curio}}, shall we say.
+
+                He's willing to pay handsomely, but I'll need someone to find it for me. What do you say, =pronouns.formalAddressTerm=, are you interested?
+            </text>
+            <choice GotoID="NoSpecialOrder">Sounds sketchy to me. No thanks.</choice>
+            <choice GotoID="YesSpecialOrder1" StartQuest="Special Order">Sounds like I'm just the =pronouns.personTerm= for the job.</choice>
+        </node>
+        <node ID="NoSpecialOrder">
+            <text>Fair enough.</text>
+            <choice GotoID="Start">Let's talk about something else.</choice>
+        </node>
+        <node ID="YesSpecialOrder1">
+            <text>Ah wonderful. My associate described the curio as such, {{w|*ahem*}}:
+
+            {{C|"A drum-like object of metal, with four flanges jutting out from its sides. A palm-sized lense of cerulean crystal rests upon each flange, and at the curio's end, a mouth-like opening lined with glittering circuitry."}}
+
+            What this thing actually is? Your guess is as good as mine.</text>
+            <choice GotoID="YesSpecialOrder2">That sounds...unique? Where can I find it?</choice>
+            <choice GotoID="End">I... see. I'm off then!</choice>
+        </node>
+        <node ID="YesSpecialOrder2">
+            <text>I don't know, to be honest. Perhaps if you ask around, some {{W|tinkers}} or {{W|merchants}} may have heard of such a thing.
+
+                Fah! If I knew where the thing was, I'd have just gone and gotten it and claimed the reward myself.</text>
+            <choice GotoID="End">Alright, I'll start looking.</choice>
+        </node>
+    </conversation>
+
+    <conversation ID="JoppaArgyve_Merge">
+        <node ID="Start" IfNotHaveQuest="Fetch Argyve a Knickknack">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfHaveQuest="Fetch Argyve a Knickknack" IfNotFinishedQuest="Fetch Argyve a Knickknack">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfFinishedQuest="Fetch Argyve a Knickknack" IfNotHaveQuest="Fetch Argyve Another Knickknack">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfHaveQuest="Fetch Argyve Another Knickknack" IfNotFinishedQuest="Fetch Argyve Another Knickknack">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfNotHaveQuest="Weirdwire Conduit.. Eureka!">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfHaveQuest="Weirdwire Conduit.. Eureka!" IfNotFinishedQuest="Weirdwire Conduit.. Eureka!">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfNotHaveQuest="A Canticle for Barathrum">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="Start" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="SpecialOrder">
+            <text>Hmmm. If it... {{w|*mumbling*}} but maybe it could... {{w|*mumbling*}} perhaps? No. {{w|*mumbling}}</text>
+            <choice GotoID="SpecialOrder2">Argyve?</choice>
+            <choice GotoID="End">Uh... whatever old man.</choice>
+        </node>
+        <node ID="SpecialOrder2">
+            <text>Huh, what? Oh yes, you. I think I had heard some rumors that some {{W|nasty beasty}} was protecting something down at the bottom of one of the old {{W|rust wells}}, east of here.</text>
+            <choice GotoID="SpecialOrder3">The rust wells? There are dozens of rusty old holes out there. Do you know which one?</choice>
+            <choice GotoID="End" CompleteQuestStep="Special Order~Optional: Ask around about the curio">Great, thanks!</choice>
+        </node>
+        <node ID="SpecialOrder3">
+            <text>{{w|*Argyve laughs.*}} It's just a rumor! I don't have the foggiest idea which one it's in, if it's even there at all! Hah!
+
+            If some nasty thing is living in the rust well, there might just be some evidence on the surface. But who knows! Hah! I'm going to ignore you again now.</text>
+            <choice GotoID="End" CompleteQuestStep="Special Order~Optional: Ask around about the curio">Well, okay then.</choice>
+        </node>
+    </conversation>
+
+    <conversation ID="GenericMerchant_Merge">
+        <node ID="Start" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="SpecialOrder">
+            <text>
+                Well that certainly sounds interesting! But I have not heard of that, no.~
+                =player.formalAddressTerm=, you honor me with your search for knowledge. Alas, I have heard nothing of such a device.~
+                No. I have not. Live and drink, wayfarer.~
+                Unfortunately, that object is completely unfamiliar to me. Good luck in your search.
+            </text>
+            <choice GotoID="End">Oh well. Thanks anyway.</choice>
+        </node>
+    </conversation>
+
+    <conversation ID="DromadTrader_Merge">
+        <node ID="Start">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="SpecialOrder">
+            <text>Ah! You desire knowledge. This is good! This saltstrider does not have this knowledge for you. That is unfortunate.
+
+            Perhaps one of your human tinkers would have this knowledge.</text>
+            <choice GotoID="End">That is unfortunate.</choice>
+        </node>
+    </conversation>
+
+    <conversation ID="tinker_Merge">
+        <node ID="Start">
+            <choice GotoID="SpecialOrder" IfHaveQuest="Special Order" IfNotFinishedQuestStep="Special Order~Optional: Ask around about the curio">Have you heard of any artifact like this? {{g|[Describe the {{W|strange curio}}]}}</choice>
+        </node>
+        <node ID="SpecialOrder">
+            <text>You know, that rings a kinda bell.
+
+                {{w|*The tinker thinks for a moment, fingers pinching the bridge of their nose.*}}
+
+                Ah yeah, I remember now!</text>
+            <choice GotoID="SpecialOrder2">Tell me!</choice>
+            <choice GotoID="End">You know what? Nevermind.</choice>
+        </node>
+        <node ID="SpecialOrder2">
+            <text>A few years back, a couple of fellers came through, treasure hunters they were. A bit frazzled, said they come from one of them {{W|rust wells}}, out east of Red Rock. Said they was looking for lost artifacts down deep when they ran across some {{W|fearsome beast}} and hightailed it right back up.
+
+            They tried to get a hunting party together to go back, but I don't think they ever did. But one of them did say he caught a glimpse of that monster's hoard and described an object kinda like what you said.</text>
+            <choice GotoID="SpecialOrder3">That's incredible! But, there are a whole lot of rusty holes out there. Do you know which one?</choice>
+            <choice GotoID="End" CompleteQuestStep="Special Order~Optional: Ask around about the curio">That's all I need to hear, thanks!</choice>
+        </node>
+        <node ID="SpecialOrder3">
+            <text>{{w|*The tinker frowns.*}} Well, I, uh... it was a fews years ago and I don't quite recollect the details.
+
+                But ya know, if some nasty thing was living down in a rust well, there might just be some evidence up on the surface.</text>
+            <choice GotoID="End" CompleteQuestStep="Special Order~Optional: Ask around about the curio">Huh, I hadn't thought of that. Thanks!</choice>
+        </node>
+    </conversation>
+</conversations>

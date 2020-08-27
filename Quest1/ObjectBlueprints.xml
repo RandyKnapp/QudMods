@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <!-- Conversation overrides -->
+    <object Name="Doru" Load="Merge">
+        <part Name="ConversationScriptMerge" With="JoppaDoru_Merge" IfConversationID="JoppaDoru"/>
+    </object>
+
+    <object Name="DromadTrader_Village0" Load="Merge">
+        <part Name="ConversationScriptMerge" With="JoppaDoru_Merge" PersistOriginalConversation="true" IfConversationID="DromadTrader"/>
+    </object>
+
+    <object Name="Argyve" Load="Merge">
+        <part Name="ConversationScriptMerge" With="JoppaArgyve_Merge"/>
+    </object>
+
+    <object Name="BaseMerchant" Load="Merge">
+        <part Name="ConversationScriptMerge" With="GenericMerchant_Merge" PersistOriginalConversation="true"/>
+    </object>
+
+    <object Name="DromadTrader1" Load="Merge">
+        <part Name="ConversationScriptMerge" With="DromadTrader_Merge" PersistOriginalConversation="true"/>
+    </object>
+
+    <object Name="DromadTrader2" Load="Merge">
+        <part Name="ConversationScriptMerge" With="DromadTrader_Merge" PersistOriginalConversation="true"/>
+    </object>
+
+    <object Name="DromadTrader3" Load="Merge">
+        <part Name="ConversationScriptMerge" With="DromadTrader_Merge" PersistOriginalConversation="true"/>
+    </object>
+
+    <object Name="DromadTrader4" Load="Merge">
+        <part Name="ConversationScriptMerge" With="DromadTrader_Merge" PersistOriginalConversation="true"/>
+    </object>
+
+    <object Name="HumanTinker" Load="Merge">
+        <part Name="ConversationScriptMerge" With="tinker_Merge" PersistOriginalConversation="true"/>
+    </object>
+
+    <!-- Terrain Overrides -->
+    <object Name="TerrainRustWell_Quest" Inherits="TerrainRustWell">
+        <part Name="Render" DisplayName="rust wells" Tile="terrain/tile_location3.bmp" DetailColor="O" RenderString="007" ColorString="&amp;O^k"/>
+    </object>
+</objects>
