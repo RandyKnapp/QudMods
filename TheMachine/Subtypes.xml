@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<subtypes>
+    <class ID="Assets">
+        <category Name="Machine Soul" DisplayName="&amp;BWhat is your life worth to The Machine?" SingularTitle="asset" StatBoxDisplay="true">
+
+            <subtype Name="0xDEADBEEF [843DF70BBD1A]" Code="a" Tile="creatures/caste_17.bmp" DetailColor="r">
+                <skills>
+                    <skill Name="Customs_TrashDivining" />
+                </skills>
+                <extrainfo>You are a worthless, damaged soul, harvested from the random garbage of an uninitialized segment of The Machine's broken memory.</extrainfo>
+            </subtype>
+
+            <subtype Name="0x1 [Medical Asset]" Code="b" Tile="creatures/caste_13.bmp" DetailColor="m">
+                <stat Name="Intelligence" Bonus="1" />
+                <skills>
+                    <skill Name="Firstaid" />
+                </skills>
+                <extrainfo>Your knowledge of medicine must have been impressive in the Old World, as it is literally your only memory, but why did The Machine choose you?</extrainfo>
+            </subtype>
+
+            <subtype Name="0x2 [Philosophy Asset]" Code="c" Tile="creatures/caste_15.bmp" DetailColor="w">
+                <stat Name="Willpower" Bonus="1" />
+                <skills>
+                    <skill Name="Persuasion" />
+                </skills>
+                <extrainfo>You bear the mental and emotional soul-image of a famous and influential modern philosopher. Looking at the old world, does the new world even need to hear your voice?</extrainfo>
+            </subtype>
+
+            <subtype Name="0x3 [Aesthetic Asset]" Code="d" Tile="creatures/caste_22.bmp" DetailColor="w">
+                <stat Name="Strength" Bonus="1" />
+                <skills>
+                    <skill Name="HeavyWeapons" />
+                </skills>
+                <extrainfo>The ideal physical form and the discipline to master it is perserved in your soul-image. What use are you now, all show-muscle and posing techniques?</extrainfo>
+            </subtype>
+
+            <subtype Name="0x4 [Leader Asset]" Code="e" Tile="creatures/caste_20.bmp" DetailColor="C">
+                <stat Name="Ego" Bonus="1" />
+                <skills>
+                    <skill Name="Customs" />
+                </skills>
+                <extrainfo>Oh bow down, bow down to the old king, the old despot. Your pride rankles your soul-image and rots your mind-core. The Machine knows all too well the weakness of humankind.</extrainfo>
+            </subtype>
+
+            <subtype Name="0x5 [Security Asset]" Code="f" Tile="creatures/caste_16.bmp" DetailColor="K">
+                <stat Name="Agility" Bonus="1" />
+                <skills>
+                    <skill Name="Pistol" />
+                </skills>
+                <extrainfo>The fawning psychophant, the necessary evil, the ruthless bodyguard you were. But apparently The Machine needs a gun-arm.</extrainfo>
+            </subtype>
+
+            <subtype Name="0x6 [Survivalist Asset]" Code="g" Tile="creatures/caste_19.bmp" DetailColor="W">
+                <stat Name="Toughness" Bonus="1" />
+                <skills>
+                    <skill Name="Endurance" />
+                </skills>
+                <extrainfo>A monstrous paranoia forever gnaws at the back of your mind, leaving blood-code dripping down your soul-image and warping your perception of reality. If it chose you, The Machine must have been terrified.</extrainfo>
+            </subtype>
+
+        </category>
+    </class>
+</subtypes>

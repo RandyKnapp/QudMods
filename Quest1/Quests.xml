@@ -14,4 +14,19 @@
         </step>
 
     </quest>
+
+    <quest Name="Quest2" Level="3"
+            Accomplishment="TODO Accomplishment"
+            Hagiograph="TODO Hagiograph"
+            HagiographCategory="FindsObject">
+
+        <step Name="Ask the villagers about the curio" XP="0">
+            <text>Learn about the curio</text>
+        </step>
+
+        <step Name="Obtain the curio" XP="0">
+            <text>Get it</text>
+        </step>
+
+    </quest>
 </quests>

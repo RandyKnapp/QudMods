@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worlds>
+    <world Name="JoppaWorld" Load="Merge">
+        <cell Name="TheMachine" Inherits="WatervineCell" ApplyTo="TerrainTheMachine" Mutable="false">
+            <zone Level="5-9" x="0-2" y="0-2" Name="sky above a ruined town" >
+                <builder Class="Sky"/>
+            </zone>
+
+            <zone Level="10" x="0-2" y="0-2" Name="outskirts" NameContext="a ruined town" HasWeather="true" WindSpeed="0-50" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="200-3000">
+                <builder Class="Watervine"/>
+                <encounter Table="Watervine" Amount="medium"/>
+                <builder Class="JoppaOutskirtsRuins"/>
+                <encounter Table="JoppaOutskirtsEncounters" Amount="minimum"/>
+                <builder Class="Music" Track="Overworld1" Chance="10"/>
+            </zone>
+
+            <zone Level="10" x="1" y="1" Name="a ruined town" ProperName="false" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-50" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="200-3000">
+                <map FileName="JoppaRuins.rpm"/>
+                <builder Class="Music" Track="MehmetsMorning" Chance="100"/>
+            </zone>
+
+            <zone Level="11" x="1" y="1" Name="The Machine" ProperName="true" IncludeStratumInZoneDisplay="false">
+                <map FileName="TheMachine.rpm"/>
+                <builder Class="Music" Track="Lazarus" Chance="100"/>
+            </zone>
+
+            <zone Level="12" x="1" y="1" Name="waterlogged tunnel">
+                <builder Class="Strata" Noise="true"/>
+                <builder Class="StairsUp"/>
+                <builder Class="StairsDown"/>
+                <builder Class="Waterlogged"/>
+                <encounter Table="Redrock 1" Amount="medium"/>
+                <builder Class="PossibleCryotube"/>
+                <builder Class="FactionEncounters" Population="GenericFactionPopulation"/>
+                <builder Class="Music" Track="Caves1" Chance="5"/>
+            </zone>
+            <zone Level="13" x="1" y="1" Name="waterlogged tunnel">
+                <builder Class="Strata" Noise="true"/>
+                <builder Class="StairsUp"/>
+                <builder Class="StairsDown"/>
+                <builder Class="Waterlogged"/>
+                <encounter Table="Redrock 1" Amount="medium"/>
+                <builder Class="PossibleCryotube"/>
+                <builder Class="FactionEncounters" Population="GenericFactionPopulation"/>
+                <builder Class="Music" Track="Caves1" Chance="5"/>
+            </zone>
+            <zone Level="14" x="1" y="1" Name="waterlogged tunnel">
+                <builder Class="RiverStartMouth"/>
+                <builder Class="RiverNorthMouth"/>
+                <builder Class="Strata" Noise="true"/>
+                <builder Class="RiverBuilder"/>
+                <builder Class="StairsUp"/>
+                <encounter Table="Redrock 2" Amount="medium"/>
+                <builder Class="PossibleCryotube"/>
+                <builder Class="FactionEncounters" Population="GenericFactionPopulation"/>
+                <builder Class="Music" Track="Caves1" Chance="5"/>
+            </zone>
+            <zone Level="14" x="1" y="0" Name="waterlogged tunnel">
+                <builder Class="RiverNorthMouth"/>
+                <builder Class="RiverSouthMouth"/>
+                <builder Class="Strata" Noise="true"/>
+                <builder Class="RiverBuilder"/>
+                <builder Class="Waterlogged"/>
+                <encounter Table="Redrock 2" Amount="medium"/>
+                <builder Class="PossibleCryotube"/>
+                <builder Class="FactionEncounters" Population="GenericFactionPopulation"/>
+                <builder Class="Music" Track="Caves1" Chance="5"/>
+            </zone>
+        </cell>
+    </world>
+</worlds>

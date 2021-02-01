@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+    <option ID="OptionUseShorthandModNames" DisplayText="Use Shorthand Mod Names" Category="User Interface" Type="Checkbox" Default="Yes" />
+</options>

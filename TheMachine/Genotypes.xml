@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<genotypes>
+    <genotype Name="Machine Soul" MutationPoints="0" StatPoints="14" AllowedMutationCategories="" RandomWeight="90" DisplayName="Machine Soul" Subtypes="Assets"
+            Class="" Code="m" Tile="creatures/sw_nomad.bmp" BodyObject="HumanoidMachineSoul" BaseHPGain="1-4" BaseSPGain="50" BaseMPGain="0" StartingLocation="JoppaWorld.11.22.1.1.11@32,11">
+        <stat Name="Strength" Minimum="12" Maximum="24" />
+        <stat Name="Agility" Minimum="12" Maximum="24" />
+        <stat Name="Toughness" Minimum="12" Maximum="24" />
+        <stat Name="Intelligence" Minimum="12" Maximum="24" />
+        <stat Name="Willpower" Minimum="12" Maximum="24" />
+        <stat Name="Ego" Minimum="12" Maximum="24" />
+        <skills>
+            <skill Name="Tactics_Run" />
+            <skill Name="Survival_Camp" />
+        </skills>
+        <chargeninfo>   &amp;c&#249;&amp;y Low starting attributes
+   &amp;c&#249;&amp;y Potentially eternal life
+   &amp;c&#249;&amp;y Access to cybernetics through Machine upgrades
+   &amp;c&#249;&amp;y Access to mutations through Machine upgrades</chargeninfo>
+    </genotype>
+</genotypes>

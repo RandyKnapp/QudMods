@@ -1,0 +1,15 @@
+Ultratemporal Metatransferrence Psycholattice
+
+- X number of slots to slot a single item
+- Each time you add an item to the slot (must be identical) the percentage chance to manifest in other dimensions is increased.
+	- Use separate "manifested objects" container
+- Removing an item has a percent chance to produce some crystal or something valuable
+- Upgrades
+	- Increase number of slots
+	- Increase percentage per item added
+	- Increase initial item slotted percentage
+	- Decrease upgrade cost
+	- Automanifest the UMP into all dimensions at a specified location
+- Building
+	- Find datadisk with blueprint via quest
+	- (Unless automanifest is activated)

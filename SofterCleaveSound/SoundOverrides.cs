@@ -1,13 +1,13 @@
 ﻿using HarmonyLib;
 using XRL.World;
 
-namespace NoEatingSound
+namespace SofterCleaveSound
 {
     public static class SoundOverrides
     {
         private static readonly string[][] Overrides =
         {
-            new string[] {"Human_Eating", null}
+            new string[] {"breakage", "Clink1"},
         };
 
         [HarmonyPatch(typeof(IComponent<GameObject>))]

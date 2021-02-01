@@ -22,7 +22,7 @@
                 <builder Class="CaveWestMouth" y="10"></builder>
                 <builder Class="CaveWestMouth" y="11"></builder>
                 <builder Class="CaveWestMouth" y="12"></builder>
-                <map FileName="JoppaRuins.rpm"></map>
+                <map FileName="VillageMap.rpm"></map>
                 <builder Class="Music" Track="Kyakukya" Chance="100"></builder>
             </zone>
         </cell>

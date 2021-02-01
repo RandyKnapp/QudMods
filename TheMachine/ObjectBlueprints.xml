@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <!-- The body type for this player so that it can have the machinesoul part on it automatically -->
+    <object Name="HumanoidMachineSoul" Inherits="Humanoid">
+        <part Name="MachineSoul"/>
+    </object>
+
+    <!-- The Machine -->
+    <object Name="The Machine" Inherits="InorganicObject">
+        <part Name="Render" DisplayName="{{G|The Machine}}" Tile="Creatures/sw_cherub_baetyl.bmp" RenderString="b" ColorString="&amp;Y" DetailColor="G" />
+        <part Name="Physics" Weight="12000" Takeable="false" Solid="true" />
+        <part Name="Brain" Wanders="false" Mobile="false" />
+        <stat Name="Energy" ShortName="EN" Min="-100000" Max="100000" Value="0" />
+        <part Name="Description" Short="The Machine's singular green eye stares at you." />
+        <part Name="ArtificialIntelligence" ChargeUse="0" />
+        <part Name="Robot" />
+        <part Name="MentalShield" />
+        <part Name="RealityStabilization" ChargeUse="0" Strength="120" Visibility="0" SelfVisibility="0" WorksOnSelf="true" WorksOnCellContents="false" HitpointsAffectPerformance="true" />
+        <part Name="Metal" />
+        <part Name="LightSource" Lit="true" Radius="4" />
+        <tag Name="Robot" Value="true" />
+    </object>
+
+    <!-- The Machine World Tile -->
+    <object Name="TerrainTheMachine" Inherits="Terrain">
+        <part Name="Render" DisplayName="Joppa" RenderString="216" Tile="Terrain/tile_location5.bmp" ColorString="&amp;w^k" DetailColor="y" />
+        <part Name="Description" Short="A hole in the ground, leading to the abode of The Machine" />
+        <tag Name="NoBiomes" Value="1" />
+        <tag Name="Immutable" Value="1}" />
+        <tag Name="OverlayColor" Value="&amp;W" />
+    </object>
+</objects>

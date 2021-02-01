@@ -82,11 +82,7 @@ namespace XRL.World.Parts.Skill
         {
             bool isNonHostileRobot = obj.HasTag("Robot") && (obj.GetPart<Brain>() is Brain brain) && !brain.Hostile;
             bool needsRepair = obj.isDamaged() || (obj.HasEffect("Rusted") || obj.HasEffect("Broken") || (obj.HasPart("Repair") || obj.HasEffect("ShatteredArmor"))) || obj.HasEffect("ShatterArmor");
-            bool hasTinkerItem = obj.HasPart(nameof(TinkerItem));
-            bool tinkerItemIsRepairable = hasTinkerItem && obj.GetPart<TinkerItem>().CanRepair;
-            bool hasRepairableTinkerPartOrNoTinkerPart = !hasTinkerItem || tinkerItemIsRepairable;
-
-            return isNonHostileRobot && needsRepair && hasRepairableTinkerPartOrNoTinkerPart;
+            return isNonHostileRobot && needsRepair;
         }
 
         public bool IsRepairable()

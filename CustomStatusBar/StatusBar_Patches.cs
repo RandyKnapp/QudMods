@@ -8,7 +8,7 @@ using XRL.Rules;
 using XRL.World;
 using GameObject = XRL.World.GameObject;
 
-namespace CustomStatusBar
+/*namespace CustomStatusBar
 {
     [HarmonyPatch(typeof(PlayerStatusBar))]
     [HarmonyPatch("BeginEndTurn")]
@@ -95,4 +95,4 @@ namespace CustomStatusBar
             PlayerStatusBar_UpdateString.Invoke(__instance, new object[] {type, text, toRTF});
         }
     }
-}
+}*/

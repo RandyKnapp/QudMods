@@ -11,10 +11,13 @@ namespace Quest1
             XRLCore.Core.IDKFA = true;
             XRLCore.Core.Calm = true;
             XRLCore.Core.cool = true;
+            return true;
+        }
 
-            var player = XRLCore.Core.Game.Player.Body;
-            player.GetPart<Mutations>().AddMutation("Clairvoyance", 10);
-            player.GetStat("Ego").BaseValue = 18;
+        [XRL.Wish.WishCommand(Command = "c")]
+        public static bool C()
+        {
+            XRLCore.Core.Game.Player.Body.RequirePart<Inventory>().AddObject("Quest_StrangeCurio", true);
             return true;
         }
     }

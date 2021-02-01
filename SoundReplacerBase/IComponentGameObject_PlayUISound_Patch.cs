@@ -7,7 +7,8 @@ namespace NoEatingSound
     {
         private static readonly string[][] Overrides =
         {
-            new string[] {"Human_Eating", null}
+            new string[] {"Human_Eating", null},
+            new string[] {"breakage", "Clink1"},
         };
 
         [HarmonyPatch(typeof(IComponent<GameObject>))]

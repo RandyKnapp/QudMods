@@ -1,0 +1,10 @@
+{
+  "id": "SofterCleaveSound",
+  "loadorder": 1,
+  "title": "{{engraved|Softer Cleave Sound}}",
+  "description": "Does that high-pitched, ringing Cleave sound bother your ears? This mod changes the cleave sound (breakage) to a softer sound (Clink1).\n\n{{m|You can set your own sound ID on line 10 of SoundOverrides.cs}}",
+  "tags": "beta,ux,cosmetic",
+  "version": "1.0",
+  "author": "{{zetachrome|RandyKnapp}}",
+  "previewImage": "preview.png"
+}

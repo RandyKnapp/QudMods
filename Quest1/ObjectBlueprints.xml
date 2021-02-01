@@ -41,4 +41,40 @@
     <object Name="TerrainRustWell_Quest" Inherits="TerrainRustWell">
         <part Name="Render" DisplayName="rust wells" Tile="terrain/tile_location3.bmp" DetailColor="O" RenderString="007" ColorString="&amp;O^k"/>
     </object>
+
+    <!-- Quest Objects -->
+    <object Name="Quest_StrangeCurio" Inherits="Item">
+        <part Name="Render" DisplayName="{{W|strange curio}}" Tile="Items/sw_cyber_biodynamic_power_plant.bmp" TileColor="&amp;W" DetailColor="B" RenderLayer="4" />
+        <part Name="Physics" Category="Quest Items" Weight="7" />
+        <part Name="Description" Short="A flanged, metal and crystal device with a hollow at one end. Inside the hollow is a strange mechanism." />
+        <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
+        <part Name="PowerSwitch" EnergyCost="1000" Active="false" FlippableWithoutUnderstanding="true" CanDeactivate="false"
+                ActivateSuccessMessage="" ActivateFailureMessage="" InactiveAdjective=""
+                ActivateVerb="try to activate" ActivatePreposition=""/>
+        <part Name="Metal" />
+        <part Name="Randy_StrangeCurio" />
+        <part Name="QuestStepFinisher" Trigger="Seen" Quest="Special Order" Step="Find the curio" />
+        <part Name="QuestStarter" Quest="Quest2" Trigger="Seen" IfFinishedQuestStep="Special Order~Find the curio" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="NoSparkingQuest" />
+    </object>
+
+    <object Name="CreaturePrint" Inherits="InorganicObject">
+        <part Name="Render" DisplayName="creature's footprints" Tile="Items/sw_saltback_print.bmp" ColorString="&amp;w" DetailColor="y" RenderLayer="10" />
+        <part Name="Physics" Weight="0" Takeable="false" Solid="false" />
+        <part Name="Description" Short="Some kind of creature left these footprints." />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    </object>
+
+    <object Name="UmpTerminal" Inherits="Furniture">
+        <part Name="Physics" Weight="5000" FlameTemperature="99999" VaporTemperature="1500" Takeable="false" Solid="true" />
+        <part Name="Render" DisplayName="Ultratemporal Metatransferrence Psycholattice" TileColor="&amp;W" DetailColor="o" Tile="Items/sw_cyber_micromanipulator_array.bmp" />
+        <part Name="Description" Short="Test Description" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <part Name="Metal" />
+        <part Name="CyberneticsTerminal2" />
+        <part Name="UmpDevice" />
+        <part Name="Examiner" AlternateDisplayName="strange device" Complexity="2" />
+        <tag Name="NoVillageStrip" />
+    </object>
 </objects>
