@@ -15,7 +15,7 @@ namespace SuppressScavengingPopups
 
         public static bool Prefix()
         {
-            PreviousSuppressionState = Popup.bSurpressPopups;
+            PreviousSuppressionState = Popup.bSuppressPopups;
             if (Options.GetOption(SuppressPopupOption) == "Yes")
             {
                 Popup.bSurpressPopups = true;
